@@ -101,33 +101,87 @@ html {
 
 /*Header */
 
-.nav-links {
+:root {
+  --ff-montserrat: 'Montserrat', sans-serif; /* Example font family */
+  --ff-lora: 'Lora', serif; /* Example font family */
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: url('../img/bg.png'); /* Replace with your image path */
+  background-size: cover;
+  background-position: center;
   display: flex;
+  justify-content: center;
   align-items: center;
+  z-index: 1;
 }
 
-.nav-links li {
-  font-family: var(--ff-montserrat);
-  margin: 0px 15px;
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(17, 72, 114, 0.5); /* Blue overlay with 50% opacity */
+  z-index: -1;
 }
 
-.nav-links li a {
+.hero-content {
+  text-align: center;
   color: white;
-  cursor: pointer;
+  z-index: 2; /* Ensure the text stays above the overlay */
 }
 
-.cir_border {
-  padding: 6px 20px;
-  font-weight: bold;
-  border: 2px hidden whitesmoke;
-  border-radius: 20px;
-  margin: 0px -10px;
+.hero-content h1 {
+  font-size: 48px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
 }
+
+.hero-content p {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.explore-btn {
+  display: inline-block;
+  padding: 15px 40px;
+  background-color: #b01352;
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 30px;
+  font-size: 20px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.explore-btn:hover {
+  background-color: #e3e9ea;
+  color: black;
+  transform: scale(1.05);
+}
+
+
 
 header {
   width: 100vw;
   height: 100vh;
-  background-image: url("../img/mountainss.jpg");
+  background-image: url("../img/bg.png");
   background-position: bottom;
   background-attachment: fixed;
   background-size: cover;
@@ -151,27 +205,74 @@ header {
 }
 
 .header-content h2 {
-  font-size: 4vmin;
-  background: linear-gradient(90deg, white, rgb(197, 90, 108));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  color: transparent;
+  font-size: 5vmin;
+  position: relative; /* Needed for positioning the pseudo-element */
+  
+  /* Setting the text color to pink */
+  color: rgb(207, 32, 102);
+  
+  /* Adding a black border effect */
+  /* text-shadow: 
+    -1px -1px 0 black,
+    1px -1px 0 black,
+    -1px 1px 0 black,
+    1px 1px 0 black; */
 }
 
-
-.line {
-  width: 150px;
-  height: 4px;
-  background: #fc036b;
-  margin: 10px auto;
-  border-radius: 5px;
+.header-content h2::before {
+  content: attr(data-text); /* Duplicate the text */
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 4vmin; /* Match the font size */
+  /* color: black; Border color */
+  z-index: -1; /* Place it behind the original text */
 }
 
 .header-content h1 {
   font-size: 7vmin;
   margin-top: 50px;
   margin-bottom: 30px;
+  
+  /* Adding a pink text color */
+  color: rgb(207, 32, 102);
+  
+  /* Adding a black border effect */
+  /* text-shadow: 
+    -1px -1px 0 black,
+    1px -1px 0 black,
+    -1px 1px 0 black,
+    1px 1px 0 black; */
+}
+
+.line { 
+  width: 150px;
+  height: 4px;
+  background: #d34f86;
+  margin: 10px auto;
+  border-radius: 5px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links li {
+  font-family: var(--ff-montserrat);
+  margin: 0px 15px;
+}
+
+.nav-links li a {
+  color: white;
+  cursor: pointer;
+}
+
+.cir_border {
+  padding: 6px 20px;
+  font-weight: bold;
+  border: 2px hidden whitesmoke;
+  border-radius: 20px;
 }
 
 /*----------------------*/
@@ -320,6 +421,36 @@ section {
 .explore-content .ctn {
   margin: 17px auto;
   padding: 12px 27px;
+}
+/* tours */
+.details {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.days, .likes {
+  background-color: #f6f6f6; /* Adjust the color to match your theme */
+  border-radius: 10px;
+  padding: 5px 15px;
+  font-size: 14px;
+  color: #333; /* Adjust to match your theme */
+  margin-right: 10px; /* Adds space between the two buttons */
+}
+
+.likes {
+  display: flex;
+  align-items: center;
+  margin-left: 10px; /* Adds space to the left of the likes button */
+}
+
+.likes i {
+  color: red;
+  margin-right: 5px;
+}
+
+.days {
+  background-color: #87e1e9; /* Example: to match the "Days" button color */
 }
 
 /* ----------------------------------------- */
