@@ -32,6 +32,8 @@ function updateNav() {
         }
     });
 }
+//booking
+
 
 //Explore 
 
