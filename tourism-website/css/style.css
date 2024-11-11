@@ -194,6 +194,16 @@ html {
   border-color: #b01352;
 }
 
+.booking-btn a {
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.booking-btn a:hover {
+  background-color: #e61949; /* Slightly darker shade on hover */
+  transform: translateY(-3px) scale(1.05); /* Slight lift and enlargement on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
 
 
 /*Header */
@@ -212,12 +222,11 @@ html {
 body {
   overflow-x: hidden;
 }
-
 .hero {
   position: relative;
   width: 100%;
   height: 100vh;
-  background-image: url('../img/bg.png'); /* Replace with your image path */
+  background-image: url('../img/hero-banner.jpg'); /* Replace with your image path */
   background-size: cover;
   background-position: center;
   display: flex;
@@ -226,6 +235,7 @@ body {
   z-index: 1;
 }
 
+/* Darker overlay to reduce exposure further */
 .hero::before {
   content: "";
   position: absolute;
@@ -233,7 +243,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(17, 72, 114, 0.5); /* Blue overlay with 50% opacity */
+  background-color: rgba(0, 0, 0, 0.7); /* Increased opacity for more darkness */
   z-index: -1;
 }
 
@@ -244,10 +254,11 @@ body {
 }
 
 .hero-content h1 {
-  font-size: 48px;
+  font-size: 80px;
   text-transform: uppercase;
   margin-bottom: 10px;
 }
+
 
 .hero-content p {
   font-size: 24px;
@@ -393,6 +404,7 @@ header {
   display: none;
 }
 
+
 /* Events */
 section {
   width: 80%;
@@ -458,6 +470,57 @@ section {
 .events .ctn {
   margin-top: 30px;
 }
+
+/* booking */
+
+
+    /* Centered Container for Better Layout */
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    /* Enhanced Booking Button Style */
+    .booking-button {
+        display: inline-block;
+        padding: 20px 50px;
+        background: linear-gradient(135deg, #ff5a5f, #ff4081);
+        color: white;
+        text-decoration: none;
+        border-radius: 10px;
+        font-size: 22px;
+        font-weight: bold;
+        position: relative;
+        overflow: hidden;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+        box-shadow: 0 8px 20px rgba(255, 64, 129, 0.3);
+    }
+
+    .booking-button:hover {
+        background: linear-gradient(135deg, #ff4081, #b01352);
+        transform: translateY(-3px);
+        box-shadow: 0 12px 25px rgba(255, 64, 129, 0.5);
+    }
+
+    .booking-button::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -75%;
+        width: 50%;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.2);
+        transform: skewX(-20deg);
+        transition: left 0.5s ease;
+    }
+
+    .booking-button:hover::before {
+        left: 100%;
+    }
+
+
+   
+
 
 /* explore */
 .explore {

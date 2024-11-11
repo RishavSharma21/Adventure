@@ -14,45 +14,61 @@
 </head>
 
 <body>
+  
     <!-- navbar -->
-
     <nav class="navbar glass" style="height: 70px">
-        <span><a href="#home" style="display: flex; align-items: center"><img class="img2" src="./img/mountain.png"
-                    width="40" style="margin: -25px -10px -25px -20px" />
+        <span>
+            <a href="#home" style="display: flex; align-items: center">
+                <img class="img2" src="./img/mountain.png" width="40" style="margin: -25px -10px -25px -20px" />
                 <h1 class="logo">&nbsp;ADVENTURE</h1>
-            </a></span>
+            </a>
+        </span>
         <ul class="nav-links">
             <li>
-                <a href="index.html" id="pri" class="active cir_border">Home</a>
+                <a href="#home" id="pri" class="active cir_border">Home</a>
             </li>
-            <li><a href="#events" id="sec" class="cir_border">Tours</a></li>
+            <li>
+                <a href="#events" id="sec" class="cir_border">Tours</a>
+            </li>
+            <li>
+                <a href="#book" id="sec" class="cir_border">Book</a>
+            </li>
             <li>
                 <a href="#explore" id="tri" class="cir_border">Explore</a>
             </li>
-
             <li>
                 <a href="#contact" id="hept" class="cir_border">Contact</a>
             </li>
-                    </ul>
-
+        </ul>
     </nav>
-    <!--navbar-->
 
+    <!-- navbar -->
+     
     <!--Home--->
     <body>
-        <section class="hero"> 
+        
+        <section class="hero" id="home"> 
             <div class="hero-content">
-                <h1>LIFE IS SHORT AND THE WORLD IS WIDE</h1>
-                <p>THE SOONER YOU START EXPLORING IT THE BETTER</p>
-                <a href="#" class="explore-btn">Explore Now</a>
+                <h1>JOURNEY TO </h1>
+                <H1>EXPLORE WORLD</H1>
+                <h3>"LIFE IS SHORT AND THE WORLD IS WIDE</h3>
+                <span>  </span>
+                <h3>THE SOONER YOU START EXPLORING IT THE BETTER"</h3>
+                <br>
+                
+                <a href="#explore" class="explore-btn">Explore Now</a>
             </div>
         </section>
+        
     </body>
    <!--Home--->
 
 
+
+
 <!-- Tours -->
 <section class="events" id="events">
+    <br><br><br><br><br><br>
     <div class="container">
         <div class="title">
             <h1 class="dark">TRENDING DESTINATIONS</span></h1>
@@ -107,41 +123,37 @@
 </section>
 
 <!-- booking model -->
-<section class="book wow fadeInUp" data-wow-duration="4s" id="book">
-    <h1 class="heading">
-        <span>B</B></span><span>O</span><span>O</span><span>K</span>
+<section class="book wow fadeInUp" data-wow-duration="4s" id="book" style="background: radial-gradient(circle, rgba(250, 250, 250, 0.3), rgba(0, 0, 0, 0.6)), url('../tourism-website/img/book-bg.jpg'); background-size: cover; padding: 100px 20px; border-radius: 20px; box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);">
+    <div class="container" style="display: flex; flex-direction: column; align-items: center; text-align: center; color: #fff;">
+        <!-- Section Title -->
+        <h2 style="font-size: 3.5rem; font-weight: 700; color: #fff; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 3px; text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);">
+            Embark on Your Next Adventure
+        </h2>
+        <!-- Subtitle Text -->
+        <p style="font-size: 1.3rem; color: #f7f7f7; max-width: 700px; margin-bottom: 50px; line-height: 1.8; font-weight: 400; opacity: 0.85;">
+            Explore breathtaking destinations and book unforgettable experiences. Let us help you turn your travel dreams into reality. Adventure awaits!
+        </p>
         
-        <span>N</span><span>O</span><span>W</span>
-      </h1>
-  
-    <div class="row">
-      <div class="image" data-aos="fade-right" data-aos-offset="10" data-aos-duration="500">
-        <img src="../tourism-website/img/book-img.svg" alt="">
-      </div>
-  
-      <form action="" data-aos="fade-up" data-aos-offset="40" data-aos-duration="600">
-        <div class="inputBox">
-          <h3>Where To</h3>
-          <input type="text" placeholder="place name">
+        <!-- Image and Button Wrapper -->
+        <div style="display: flex; justify-content: center; gap: 50px; flex-wrap: wrap; align-items: center;">
+            <!-- Image Section -->
+            <div class="image" data-aos="fade-right" data-aos-offset="10" data-aos-duration="500" style="flex: 1; max-width: 300px; min-width: 200px;">
+                <img src="../tourism-website/img/book-img1.png" alt="Travel Illustration" style="max-width: 100%; border-radius: 20px; box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2); transform: scale(1); transition: transform 0.4s ease-in-out;">
+            </div>
+            
+            <!-- Booking Button Section -->
+            <div class="booking-btn" style="flex: 1; text-align: center;">
+                <a href="book.html" target="_blank" class="booking-button" style="display: inline-block; background-color: #ff0077; color: #fff; padding: 18px 50px; font-size: 1.3rem; font-weight: 600; text-transform: uppercase; border-radius: 50px; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); text-decoration: none; transition: all 0.3s ease-in-out; border: 2px solid transparent; letter-spacing: 1px;">
+                    Book Your Tour Now
+                </a>
+                <p style="font-size: 1rem; color: #f7f7f7; margin-top: 20px; font-weight: 400; opacity: 0.9;">Your next adventure is just a click away!</p>
+            </div>
         </div>
-        <div class="inputBox">
-          <h3>How Many</h3>
-          <input type="number" placeholder="number of guests">
-        </div>
-        <div class="inputBox">
-          <h3>Arrivals</h3>
-          <input type="date" placeholder="dd-mm-yyyy">
-        </div>
-        <div class="inputBox">
-          <h3>Leaving</h3>
-          <input type="date" placeholder="dd-mm-yyyy">
-        </div>
-        <button type="submit" class="book-now">Book Now</button>
-      </form>
-      
     </div>
-    
 </section>
+
+
+
 
 
 <!-- book section ends -->
@@ -154,7 +166,7 @@
             <h1>EXPLORE THE WORLD</h1>
             <div class="line"></div>
             <p>
-                "Discover the most popular destinations around the world. Just type in a location, and we'll show you the top attractions.
+                "Discover the most popular destinations around the india. Just type in a location, and we'll show you the top attractions.
                  Start your journey now by searching for your next adventure!"
             </p>
             <div class="box">
@@ -219,6 +231,13 @@
                 </div>
             </div>
         </section>
+        <script>
+            document.querySelector('.explore-btn').addEventListener('click', function(e) {
+                e.preventDefault();
+                const modal = document.getElementById('auth-modal-frame').contentWindow.document.getElementById('auth-modal');
+                modal.style.display = 'block';
+            });
+        </script>
         
         <!-- contact  -->
         <!-- end -->
@@ -233,6 +252,7 @@
         <!--footer-->
         
         <script src="js/script.js"></script>
+        <script src="authModal.js"></script>
 </body>
 
 </html>

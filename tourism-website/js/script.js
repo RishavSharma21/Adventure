@@ -5,33 +5,29 @@ function updateNav() {
     const sections = document.querySelectorAll("section");
     const navLinks = document.querySelectorAll(".nav-links li a");
 
+    let sectionInViewIndex = -1; // Track the index of the section currently in view
+
     sections.forEach((section, index) => {
         const rect = section.getBoundingClientRect();
 
-        if (window.screen.width <= 425) {
-            if (rect.top <= 1300) {
-                navLinks.forEach((navLink) => {
-                    navLink.classList.remove("active");
-                });
-                navLinks[index].classList.add("active");
-            }
-        } else if (425 <= window.screen.width <= 768) {
-            if (rect.top <= 1250) {
-                navLinks.forEach((navLink) => {
-                    navLink.classList.remove("active");
-                });
-                navLinks[index].classList.add("active");
-            }
-        } else {
-            if (rect.top <= 1000) {
-                navLinks.forEach((navLink) => {
-                    navLink.classList.remove("active");
-                });
-                navLinks[index].classList.add("active");
-            }
+        // For each section, check if it's in the viewport (scroll position)
+        if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 4) {
+            sectionInViewIndex = index;
         }
     });
+
+    // Update the active class based on the section currently in view
+    if (sectionInViewIndex !== -1) {
+        navLinks.forEach((navLink, index) => {
+            navLink.classList.remove("active");
+            if (index === sectionInViewIndex) {
+                navLink.classList.add("active");
+            }
+        });
+    }
 }
+
+
 //booking
 
 
