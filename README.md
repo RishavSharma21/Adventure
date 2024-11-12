@@ -7,8 +7,10 @@
 
 
 
-![Project Screenshot](tourism-website/img/Screenshot 2024-11-11 235212.png)
-![Project Screenshot](tourism-website/img/Screenshot 2024-11-11 235242.png)
+![Adventure Website Screenshot](tourism-website/img/Screenshot%202024-11-11%20235212.png)
+
+![Adventure Website Screenshot](tourism-website/img/Screenshot%202024-11-11%20235242.png)
+
 ![Project Screenshot](tourism-website/img/Screenshot 2024-11-11 235312.png)
 ![Project Screenshot](tourism-website/img/Screenshot 2024-11-11 235338.png)
 ![Project Screenshot](tourism-website/img/Screenshot 2024-11-11 235416.png)
